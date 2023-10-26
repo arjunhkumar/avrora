@@ -24,10 +24,12 @@ hs_err_pid*
 replay_pid*
 
 # Eclipse
+/.metadata/
 bin/
 .classpath
 .project
 .settings/
+.metadata/
 
 # Intellij
 .idea/
