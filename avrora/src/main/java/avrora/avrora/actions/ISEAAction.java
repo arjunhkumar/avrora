@@ -32,7 +32,7 @@
 
 package avrora.avrora.actions;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.core.Program;
 import avrora.avrora.core.SourceMapping;
 import avrora.avrora.stack.isea.ISEAnalyzer;

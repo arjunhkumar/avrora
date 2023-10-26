@@ -35,8 +35,8 @@ package avrora.avrora.test;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import avrora.avrora.Defaults;
-import avrora.avrora.Main;
+import avrora.Defaults;
+import avrora.Main;
 import avrora.avrora.core.Program;
 import avrora.avrora.sim.Simulator;
 import avrora.avrora.sim.util.InterruptScheduler;

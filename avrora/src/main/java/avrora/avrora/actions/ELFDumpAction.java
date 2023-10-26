@@ -36,7 +36,7 @@ package avrora.avrora.actions;
 import java.io.RandomAccessFile;
 import java.util.List;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.cck.elf.ELFHeader;
 import avrora.cck.elf.ELFLoader;
 import avrora.cck.elf.ELFProgramHeaderTable;
@@ -116,7 +116,10 @@ public class ELFDumpAction extends Action
 
         }
         catch (ELFHeader.FormatError e)
-        {
+        {	
+        	Util.userError(fname, "1");
+        	Util.userError(fname, e.getStackTrace().toString());
+        	Util.userError(fname, e.toString());
             Util.userError(fname, "invalid ELF header");
         }
     }

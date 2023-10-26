@@ -34,7 +34,7 @@
 
 package avrora.avrora.test;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.core.Program;
 import avrora.avrora.sim.AtmelInterpreter;
 import avrora.avrora.sim.Simulator;

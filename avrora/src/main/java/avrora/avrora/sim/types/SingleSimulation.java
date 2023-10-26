@@ -32,7 +32,7 @@
 
 package avrora.avrora.sim.types;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.core.LoadableProgram;
 import avrora.avrora.sim.Simulation;
 import avrora.avrora.sim.clock.Synchronizer;

@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.core.LoadableProgram;
 import avrora.avrora.core.Program;
 import avrora.avrora.monitors.Monitor;

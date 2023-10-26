@@ -54,7 +54,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.core.LoadableProgram;
 import avrora.avrora.sim.Simulation;
 import avrora.avrora.sim.platform.PlatformFactory;

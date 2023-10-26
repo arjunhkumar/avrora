@@ -34,7 +34,7 @@
 
 package avrora.avrora.test.sim.msp430;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.arch.AbstractArchitecture;
 import avrora.avrora.arch.msp430.MSP430Architecture;
 import avrora.avrora.core.Program;

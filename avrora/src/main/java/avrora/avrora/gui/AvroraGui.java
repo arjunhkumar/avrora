@@ -60,7 +60,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import avrora.avrora.Version;
+import avrora.Version;
 import avrora.avrora.gui.VisualRadioMonitor.VisualMonitor;
 import avrora.avrora.sim.Simulation;
 import avrora.avrora.sim.types.SensorSimulation;

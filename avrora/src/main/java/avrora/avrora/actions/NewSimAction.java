@@ -34,7 +34,7 @@
 
 package avrora.avrora.actions;
 
-import avrora.avrora.Main;
+import avrora.Main;
 //import avrora.arch.AbstractArchitecture;
 //import avrora.arch.AbstractDisassembler;
 import avrora.avrora.syntax.elf.ELFParser;

@@ -38,8 +38,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-import avrora.avrora.Defaults;
-import avrora.avrora.Main;
+import avrora.Defaults;
+import avrora.Main;
 import avrora.avrora.core.LoadableProgram;
 import avrora.avrora.core.Program;
 import avrora.avrora.core.SourceMapping;

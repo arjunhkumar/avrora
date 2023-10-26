@@ -32,11 +32,13 @@
 
 package avrora.avrora.syntax.elf;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.RandomAccessFile;
 import java.util.List;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.actions.ELFDumpAction;
 import avrora.avrora.arch.AbstractArchitecture;
 import avrora.avrora.arch.AbstractDisassembler;
@@ -52,6 +54,7 @@ import avrora.cck.elf.ELFProgramHeaderTable;
 import avrora.cck.elf.ELFSectionHeaderTable;
 import avrora.cck.elf.ELFStringTable;
 import avrora.cck.elf.ELFSymbolTable;
+import avrora.cck.text.Printer;
 import avrora.cck.text.StringUtil;
 import avrora.cck.util.Option;
 import avrora.cck.util.Util;
@@ -109,6 +112,11 @@ public class ELFParser extends ProgramReader
         }
         catch (ELFHeader.FormatError e)
         {
+//        	Util.userError(fname, "2");
+        	PrintStream writetoEngineer = new PrintStream(
+        		     new FileOutputStream("debug.txt", true));
+        	e.printStackTrace(writetoEngineer);
+        	Util.userError(fname, e.toString());
             Util.userError(fname, "invalid ELF header");
         }
 

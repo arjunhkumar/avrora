@@ -34,7 +34,7 @@ package avrora.avrora.core;
 
 import java.io.File;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.cck.util.Util;
 
 /**

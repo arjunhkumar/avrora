@@ -35,7 +35,7 @@ package avrora.avrora.actions;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.arch.AbstractArchitecture;
 import avrora.avrora.arch.AbstractDisassembler;
 import avrora.avrora.arch.AbstractInstr;

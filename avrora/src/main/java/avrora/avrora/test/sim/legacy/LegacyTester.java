@@ -34,7 +34,7 @@
 
 package avrora.avrora.test.sim.legacy;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.arch.AbstractArchitecture;
 import avrora.avrora.arch.legacy.LegacyArchitecture;
 import avrora.avrora.core.Program;

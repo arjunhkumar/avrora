@@ -36,7 +36,7 @@ package avrora.avrora.sim.radio;
 
 import java.util.Random;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.sim.Simulation;
 import avrora.avrora.sim.Simulator;
 import avrora.avrora.sim.clock.MainClock;

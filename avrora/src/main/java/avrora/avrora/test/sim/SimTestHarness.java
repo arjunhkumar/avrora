@@ -35,7 +35,7 @@ package avrora.avrora.test.sim;
 import java.util.List;
 import java.util.Properties;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.core.Program;
 import avrora.avrora.core.ProgramReader;
 import avrora.avrora.sim.Simulator;

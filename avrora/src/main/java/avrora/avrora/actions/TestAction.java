@@ -32,7 +32,7 @@
 
 package avrora.avrora.actions;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.cck.test.TestEngine;
 import avrora.cck.text.Status;
 import avrora.cck.util.Option;

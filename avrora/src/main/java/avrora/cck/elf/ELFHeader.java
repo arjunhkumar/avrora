@@ -43,7 +43,7 @@ import java.io.RandomAccessFile;
  *
  * @author Ben L. Titzer
  */
-public class ELFHeader
+public primitive class ELFHeader
 {
 
     protected static final int ELFCLASSNONE = 0;
@@ -64,21 +64,21 @@ public class ELFHeader
     protected static final int ELFDATA2MSB = 2;
 
     public final byte[] e_ident;
-    public short e_type;
-    public short e_machine;
-    public int e_version;
-    public int e_entry;
-    public int e_phoff;
-    public int e_shoff;
-    public int e_flags;
-    public short e_ehsize;
-    public short e_phentsize;
-    public short e_phnum;
-    public short e_shentsize;
-    public short e_shnum;
-    public short e_shstrndx;
+    public final short e_type;
+    public final short e_machine;
+    public final int e_version;
+    public final int e_entry;
+    public final int e_phoff;
+    public final int e_shoff;
+    public final int e_flags;
+    public final short e_ehsize;
+    public final short e_phentsize;
+    public final short e_phnum;
+    public final short e_shentsize;
+    public final short e_shnum;
+    public final short e_shstrndx;
 
-    boolean bigEndian;
+    final boolean  bigEndian;
 
     public class FormatError extends Exception
     {
@@ -94,31 +94,25 @@ public class ELFHeader
      */
     public ELFHeader()
     {
-        e_ident = new byte[EI_NIDENT];
+		e_ident = new byte[EI_NIDENT];
+		bigEndian = false;
+		e_type = 0;
+		e_machine = 0;
+		e_version = 0;
+		e_entry = 0;
+		e_phoff = 0;
+		e_shoff = 0;
+		e_flags = 0;
+		e_ehsize = 0;
+		e_phentsize = 0;
+		e_phnum = 0;
+		e_shentsize = 0;
+		e_shnum = 0;
+		e_shstrndx = 0;
     }
 
-
-    /**
-     * The <code>read()</code> method reads the header from the specified input
-     * stream. It loads the identification section and checks that the header is
-     * present by testing against the magic ELF values, and reads the rests of
-     * the data section, initializes the ELF section.
-     * 
-     * @param fs
-     *            the input stream from which to read the ELF header
-     * @throws IOException
-     *             if there is a problem reading from the input stream
-     */
-    public void read(RandomAccessFile fs) throws IOException, FormatError
-    {
-        // read the indentification string
-        if (fs.length() < EI_NIDENT)
-            throw new FormatError();
-        for (int index = 0; index < EI_NIDENT;)
-            index += fs.read(e_ident, index, EI_NIDENT - index);
-        checkIdent();
-        ELFDataInputStream is = new ELFDataInputStream(this, fs);
-        e_type = is.read_Elf32_Half();
+    private ELFHeader(ELFDataInputStream is,byte[] e_ident) throws IOException {
+		e_type = is.read_Elf32_Half();
         e_machine = is.read_Elf32_Half();
         e_version = is.read_Elf32_Word();
         e_entry = is.read_Elf32_Addr();
@@ -131,7 +125,81 @@ public class ELFHeader
         e_shentsize = is.read_Elf32_Half();
         e_shnum = is.read_Elf32_Half();
         e_shstrndx = is.read_Elf32_Half();
+        this.e_ident = e_ident;
+        bigEndian = (this.e_ident[EI_VERSION] == ELFDATA2MSB);
+//		bigEndian = false;
+	}
+    
+    /** AR07 - New constructor for setting all fields during object initialization.
+     * Neccessary to make this class a primitive class. 
+     * @throws FormatError 
+     * @throws IOException */
+//    public ELFHeader(RandomAccessFile fs) throws IOException
+//    {
+//    	e_ident = new byte[EI_NIDENT];
+//    	bigEndian = new ELFHeader().isBigEndian();
+//        ELFDataInputStream is = new ELFDataInputStream(new ELFHeader(), fs);
+//        e_type = is.read_Elf32_Half();
+//        e_machine = is.read_Elf32_Half();
+//        e_version = is.read_Elf32_Word();
+//        e_entry = is.read_Elf32_Addr();
+//        e_phoff = is.read_Elf32_Off();
+//        e_shoff = is.read_Elf32_Off();
+//        e_flags = is.read_Elf32_Word();
+//        e_ehsize = is.read_Elf32_Half();
+//        e_phentsize = is.read_Elf32_Half();
+//        e_phnum = is.read_Elf32_Half();
+//        e_shentsize = is.read_Elf32_Half();
+//        e_shnum = is.read_Elf32_Half();
+//        e_shstrndx = is.read_Elf32_Half();
+//    }
+    
+//    public static ELFHeader getELFHeaderInstance(RandomAccessFile fs) throws IOException, FormatError {
+////    	 read the indentification string
+//      ELFHeader elfHeaderDummy = new ELFHeader(fs);
+//      if (fs.length() < EI_NIDENT)
+//    	  elfHeaderDummy.throwFormatError();
+//      for (int index = 0; index < EI_NIDENT;)
+//          index += fs.read(elfHeaderDummy.e_ident, index, EI_NIDENT - index);
+//      elfHeaderDummy.checkIndentByte(0, 0x7f);
+//      elfHeaderDummy.checkIndentByte(1, 'E');
+//      elfHeaderDummy.checkIndentByte(2, 'L');
+//      elfHeaderDummy.checkIndentByte(3, 'F');
+//      ELFHeader elfHeader = new ELFHeader(fs);
+//      return elfHeader;
+//    }
+//    
+//    private void throwFormatError() throws FormatError {
+//    	System.out.println("Throwing format error.");
+//    	throw new FormatError();
+//    }
+    /**
+     * The <code>read()</code> method reads the header from the specified input
+     * stream. It loads the identification section and checks that the header is
+     * present by testing against the magic ELF values, and reads the rests of
+     * the data section, initializes the ELF section.
+     * 
+     * @param fs
+     *            the input stream from which to read the ELF header
+     * @throws IOException
+     *             if there is a problem reading from the input stream
+     */
+    public ELFHeader read(RandomAccessFile fs) throws IOException, FormatError
+    {
+        // read the indentification string
+        primaryValidation(fs);
+        checkIdent();
+        ELFDataInputStream is = new ELFDataInputStream(this, fs);
+        ELFHeader elfHeader = new ELFHeader(is,this.e_ident);
+		return elfHeader;
     }
+
+	private void primaryValidation(RandomAccessFile fs) throws IOException, FormatError {
+		if (fs.length() < EI_NIDENT)
+            throw new FormatError();
+        for (int index = 0; index < EI_NIDENT;)
+            index += fs.read(e_ident, index, EI_NIDENT - index);
+	}
 
 
     private void checkIdent() throws FormatError
@@ -140,7 +208,6 @@ public class ELFHeader
         checkIndentByte(1, 'E');
         checkIndentByte(2, 'L');
         checkIndentByte(3, 'F');
-        bigEndian = isBigEndian();
     }
 
 

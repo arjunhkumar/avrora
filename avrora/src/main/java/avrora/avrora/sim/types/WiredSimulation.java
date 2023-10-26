@@ -34,7 +34,7 @@ package avrora.avrora.sim.types;
 
 import java.util.Random;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.core.LoadableProgram;
 import avrora.avrora.sim.Simulation;
 import avrora.avrora.sim.SimulatorThread;

@@ -34,7 +34,7 @@ package avrora.avrora.test;
 
 import java.util.Properties;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.core.Program;
 import avrora.avrora.core.ProgramReader;
 import avrora.avrora.syntax.Module;

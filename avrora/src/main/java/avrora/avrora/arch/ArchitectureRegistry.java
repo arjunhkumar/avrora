@@ -34,7 +34,7 @@
 
 package avrora.avrora.arch;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.arch.avr.AVRArchitecture;
 import avrora.avrora.arch.legacy.LegacyArchitecture;
 import avrora.avrora.arch.msp430.MSP430Architecture;

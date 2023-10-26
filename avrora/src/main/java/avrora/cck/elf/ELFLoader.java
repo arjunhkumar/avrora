@@ -66,9 +66,12 @@ public class ELFLoader
     public static ELFHeader readELFHeader(RandomAccessFile fis)
             throws IOException, ELFHeader.FormatError
     {
-        ELFHeader header = new ELFHeader();
-        header.read(fis);
-        return header;
+    	/** AR07 - New constructor for setting all fields during object initialization.
+         * Neccessary to make ELFHeader class a primitive class. */
+//        ELFHeader header = ELFHeader.getELFHeaderInstance(fis);
+    	ELFHeader header = new ELFHeader();
+    	return header.read(fis);
+//        return header;
     }
 
 

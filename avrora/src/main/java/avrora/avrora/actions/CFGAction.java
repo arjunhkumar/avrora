@@ -39,7 +39,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.arch.legacy.LegacyInstr;
 import avrora.avrora.core.ControlFlowGraph;
 import avrora.avrora.core.ProcedureMap;

@@ -37,7 +37,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.StreamTokenizer;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.sim.Simulator;
 import avrora.cck.text.Terminal;
 import avrora.cck.util.Util;

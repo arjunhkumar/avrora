@@ -37,7 +37,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import avrora.avrora.Defaults;
+import avrora.Defaults;
 import avrora.avrora.core.Program;
 import avrora.avrora.core.SourceMapping;
 import avrora.avrora.core.SourceMapping.Location;

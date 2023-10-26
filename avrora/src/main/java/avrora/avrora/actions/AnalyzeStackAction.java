@@ -32,7 +32,7 @@
 
 package avrora.avrora.actions;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.core.Program;
 import avrora.avrora.stack.Analyzer;
 import avrora.cck.util.Option;

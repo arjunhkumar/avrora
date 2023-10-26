@@ -42,7 +42,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import avrora.avrora.Main;
+import avrora.Main;
 import avrora.avrora.arch.AbstractArchitecture;
 import avrora.avrora.core.Program;
 import avrora.avrora.core.ProgramReader;
