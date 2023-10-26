@@ -112,11 +112,6 @@ public class ELFParser extends ProgramReader
         }
         catch (ELFHeader.FormatError e)
         {
-//        	Util.userError(fname, "2");
-        	PrintStream writetoEngineer = new PrintStream(
-        		     new FileOutputStream("debug.txt", true));
-        	e.printStackTrace(writetoEngineer);
-        	Util.userError(fname, e.toString());
             Util.userError(fname, "invalid ELF header");
         }
 

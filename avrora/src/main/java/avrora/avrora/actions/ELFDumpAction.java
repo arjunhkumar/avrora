@@ -117,9 +117,6 @@ public class ELFDumpAction extends Action
         }
         catch (ELFHeader.FormatError e)
         {	
-        	Util.userError(fname, "1");
-        	Util.userError(fname, e.getStackTrace().toString());
-        	Util.userError(fname, e.toString());
             Util.userError(fname, "invalid ELF header");
         }
     }
