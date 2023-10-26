@@ -1,4 +1,0 @@
-INDEX VERSION 1.132+/home/arjun/WD/WS/git/Dacapo-Customization/avrora/.metadata/.plugins/org.eclipse.jdt.core
-125185276.index
-1865797976.index
-2949097923.index

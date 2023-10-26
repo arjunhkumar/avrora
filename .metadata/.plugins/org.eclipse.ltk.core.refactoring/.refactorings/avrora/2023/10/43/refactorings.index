@@ -1,7 +1,0 @@
-1698330029721	Extract local variable 'elfHeader'
-1698332102770	Rename package 'avrora.avrora'
-1698336396615	Extract method 'primaryValidation'
-1698336908677	Extract method 'construct'
-1698337335412	Extract local variable 'elfHeader'
-1698339051672	Delete element
-1698339056091	Delete element
